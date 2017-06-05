@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Destination</title>
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'trips/css/pure-min.css' %}">
+    <link rel="stylesheet" href="{% static 'trips/css/grids-responsive-min.css' %}">
+    <link rel="stylesheet" href="{% static 'trips/css/mystyles.css' %}">
+  </head>
+  <body>
+    <a href="{% url 'trips:home' %}">Home</a> <a href="{% url 'login:logout' %}">Logout</a>
+    <h2>{{trip.destination}}</h2>
+    <p>Planned By: {{trip.planned_by.name}}</p>
+    <p>Description: {{trip.plan}}</p>
+    <p>Travel Date From: {{trip.start_date}}</p>
+    <p>Travel Date To: {{trip.end_date}}</p>
+    <h3>Other users' joining the trip:</h3>
+    {% for user in users_joined %}
+      <ul>
+        <li>{{user.name}}</li>
+      </ul>
+    {% endfor %}
+  </body>
+</html>

@@ -1,0 +1,12 @@
+body {
+  padding: 10px;
+}
+
+.error {
+  color: red;
+  margin: 15px 180px;
+}
+
+table {
+  margin: 20px 0px;
+}
